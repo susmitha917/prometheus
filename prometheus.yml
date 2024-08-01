@@ -9,11 +9,11 @@ alerting:
   alertmanagers:
     - static_configs:
         - targets:
-           - localhost:9093
+          - localhost:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-  # - "first_rules.yml"
+  - "alert-rules/*.yaml"
   # - "second_rules.yml"
 
 # A scrape configuration containing exactly one endpoint to scrape:
@@ -29,12 +29,6 @@ scrape_configs:
       - targets: ["localhost:9090"]
         labels:
           name: prometheus
-
-  - job_name: "nodes"
-    static_configs:
-      - targets: ["172.31.42.195:9100"]
-        labels:
-          name: node-1
   - job_name: "ec2_sd"
     ec2_sd_configs:
     - region: us-east-1
