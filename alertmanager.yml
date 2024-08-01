@@ -7,7 +7,7 @@ route:
 receivers:
   - name: 'ses'
     email_configs:
-     - smarthost: email-smtp.us-east-1.amazonaws.com:587
+      - smarthost: email-smtp.us-east-1.amazonaws.com:587
         auth_username: AKIAQ3EGVPKUIITLP7UY
         auth_password: BPiVa+zeBu5Fu8qNjaleYlWE4OkCYU8nu6WHgzUW8ITJ
         from: gonepadususmithareddy917@gmail.com
